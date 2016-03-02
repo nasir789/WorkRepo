@@ -1,0 +1,52 @@
+
+//*NOTE***Below are Javascript snippet(s) to be executed in DOM**//
+
+//*Extracts number of items in Cart, Cart total, and item images*//
+//**Saves them into Javascript variables**//
+
+function gatherInfo(){
+this.numberOfItems = document.getElementById("cartItems").innerHTML;
+this.costOfItems = document.getElementById("summaryTotal").innerHTML;
+this.picOne = document.images[1].src;
+this.picTwo = document.images[2].src;
+}
+
+var checkThree = new gatherInfo();
+
+var totalNumOfItems = checkThree.numberOfItems;
+var totalCost = checkThree.costOfItems;
+var itemOneImage = checkThree.picOne;
+var itemTwoImage = checkThree.picTwo;
+
+//////////////////////////////////////////////////////////
+///////////////Copy/Paste above code in Console///////////////
+//////////////////////////////////////////////////////////
+
+//
+
+//*NOTE* At this point we are creating centered overlay///////
+/////////while appending relevant information to HTML elements//
+
+//*NOTE* Below code to be run AFTER HTML + CSS is setup /////
+
+//As HTML+CSS has necessary information to create Content Div///
+
+//*BELOW* Appends information gathered above to their relevant HTML tags///
+
+function populateInfo(){
+$("#itemTotalx").append(totalNumOfItems);
+$("#itemCostx").append(totalCost);
+showItemOne.src= itemOneImage;
+showItemTwo.src= itemTwoImage;
+}
+
+//To load Content - call function(BELOW)//
+
+populateInfo();
+
+//////////////////////////////////////////////////////////
+///////////////Copy/Paste above code in Console///////////////
+//////////////////////////////////////////////////////////
+
+//*NOTE* Overlay trigger + Functionality in written in app.js
+/////////file.

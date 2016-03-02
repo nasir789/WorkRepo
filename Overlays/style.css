@@ -1,0 +1,71 @@
+
+#itemSum {
+  font-size: 20px;
+  color: white;
+  font: 16px / 100% 'Avenir LT W01 85 Heavy', arial, sans-serif;
+  text-align: center;
+}
+
+#buttonOne {
+  color: white;
+  background-color: black;
+  border-color: black;
+  font-size: 12px;
+}
+
+#itemTotalx{
+  display: inline;
+}
+
+#itemCostx{
+  display: inline;
+}
+
+.specContain {
+  color: white;
+  text-align: center;
+}
+.btnGroup {
+  color: white;
+  background-color: black;
+  border-color: black;
+}
+
+
+
+.mainContent {
+  display:none;
+   z-index:10000;
+   background-color:#000;
+   width:675px;
+   min-height:200px;
+   border:1px solid #666;
+   position: fixed;
+   width: 50%;
+   height: 50%;
+   margin: 0px auto;
+   top: 20%;
+   left: 25%;
+   text-align: center;
+   height: 50px;
+
+
+   -moz-box-shadow:0 0 90px 5px #000;
+   -webkit-box-shadow: 0 0 90px #000;
+/*
+   top: 15;*/
+  /*background-color: #000;
+  border: 2px solid black;*/
+}
+
+.blackOverLay {
+    display:none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+
+button:focus {outline:0;}
