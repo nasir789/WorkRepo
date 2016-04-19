@@ -11,4 +11,8 @@ app.get('/register', function(req,res){
   res.render('register.jade');
 });
 
+app.get('/login', function(req,res){
+  res.render('login.jade');
+});
+
 app.listen(3000);
