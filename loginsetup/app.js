@@ -15,4 +15,12 @@ app.get('/login', function(req,res){
   res.render('login.jade');
 });
 
+app.get('/dashboard', function(req,res){
+  res.render('dashboard.jade');
+});
+
+app.get('/logout', function(req,res){
+  res.redirect('/');
+});
+
 app.listen(3000);
