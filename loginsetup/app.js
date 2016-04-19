@@ -5,6 +5,9 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var ObjectId = Schema.ObjectId;
 
+//connect to mongo
+mongoose.connect('mongodb://localhost/newauth');
+
 var User = mongoose.model('User', new Schema({
   id: ObjectId,
   firstName: String,
@@ -16,9 +19,6 @@ var User = mongoose.model('User', new Schema({
 var app = express();
 app.set('view engine', 'jade');
 app.locals.pretty = true;
-
-//connect to mongo
-mongoose.connect('mongodb://localhost/newauth');
 
 //middleware
 app.use(bodyParser.urlencoded({ extended: true}));
@@ -33,7 +33,24 @@ app.get('/register', function(req,res){
 });
 
 app.post('/register', function(req,res){
-  res.json(req.body);
+  var user = new User({
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    password: req.body.password
+  });
+  user.save(function(err){
+    if (err) {
+      var err = "Something bad happened! Try again!";
+      if (err.code === 12345){
+        error = 'that email is already in use, try another.'
+      }
+
+      res.render('register.jade', { error:error });
+    } else {
+      res.redirect('/dashboard');
+    }
+  });
 });
 
 app.get('/login', function(req,res){
