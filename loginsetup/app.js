@@ -7,4 +7,8 @@ app.get('/', function(req,res){
   res.render('index.jade');
 });
 
+app.get('/register', function(req,res){
+  res.render('register.jade');
+});
+
 app.listen(3000);
