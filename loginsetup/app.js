@@ -6,7 +6,7 @@ var Schema = mongoose.Schema;
 var ObjectId = Schema.ObjectId;
 
 //connect to mongo
-mongoose.connect('mongodb://localhost/newauth');
+mongoose.connect('mongodb://localhost/newauthkey');
 
 var User = mongoose.model('User', new Schema({
   id: ObjectId,
@@ -56,6 +56,22 @@ app.post('/register', function(req,res){
 app.get('/login', function(req,res){
   res.render('login.jade');
 });
+
+app.post('/login', function(req,res){
+  User.findOne({ email: req.body.email }, function(err, user){
+    if(!user){
+      res.render('login.jade', { error: 'invalid email or password.'});
+    } else {
+      if (req.body.password === user.password){
+        res.redirect('/dashboard');
+      } else {
+        res.render('login.jade', { error: 'invalid email or password.'});
+      }
+    }
+  });
+});
+
+
 
 app.get('/dashboard', function(req,res){
   res.render('dashboard.jade');
