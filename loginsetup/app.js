@@ -1,6 +1,7 @@
 var bodyParser = require('body-parser');
 var express = require('express');
 var mongoose = require('mongoose');
+var sessions = require('client-sessions');
 
 var Schema = mongoose.Schema;
 var ObjectId = Schema.ObjectId;
@@ -23,6 +24,12 @@ app.locals.pretty = true;
 //middleware
 app.use(bodyParser.urlencoded({ extended: true}));
 
+app.use(sessions({
+  cookieName: 'session',
+  secret: 'osgnoo8923g5923hbtf98b323b9124b01ibsibf35',
+  duration: 30 * 60 * 1000,
+  activeDuration: 5 * 60 * 1000,
+}));
 
 app.get('/', function(req,res){
   res.render('index.jade');
@@ -63,6 +70,7 @@ app.post('/login', function(req,res){
       res.render('login.jade', { error: 'invalid email or password.'});
     } else {
       if (req.body.password === user.password){
+        req.session.user = user;
         res.redirect('/dashboard');
       } else {
         res.render('login.jade', { error: 'invalid email or password.'});
@@ -74,10 +82,23 @@ app.post('/login', function(req,res){
 
 
 app.get('/dashboard', function(req,res){
-  res.render('dashboard.jade');
+  if (req.session && req.session.user) {
+    User.findOne({ email: req.session.user.email}, function(err, user){
+      if (!user) {
+        req.session.reset();
+        res.redirect('/login');
+      } else {
+        res.locals.user = user;
+        res.render('dashboard.jade');
+      }
+    });
+  } else {
+  res.redirect('/login');
+  }
 });
 
 app.get('/logout', function(req,res){
+  req.session.reset();
   res.redirect('/');
 });
 

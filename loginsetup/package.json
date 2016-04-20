@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcryptjs": "^2.0.2",
     "express": "4.13.4",
     "pug": "0.1.0",
     "pug-linker": "0.0.4"
