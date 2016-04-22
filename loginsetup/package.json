@@ -12,5 +12,8 @@
     "express": "4.13.4",
     "pug": "0.1.0",
     "pug-linker": "0.0.4"
+    "mongoose": "4.4.13"
+    "body-parser": "1.15.0"
+    "bcryptjs": "2.3.0"
   }
 }
