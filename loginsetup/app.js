@@ -18,6 +18,8 @@ var User = mongoose.model('User', new Schema({
   password: String,
 }));
 
+//Above schema is set up for DB
+
 var app = express();
 app.set('view engine', 'jade');
 app.locals.pretty = true;
