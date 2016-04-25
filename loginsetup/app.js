@@ -102,6 +102,10 @@ app.get('/dashboard', function(req,res){
   }
 });
 
+//Reminder:
+//Must change one redirect path - error to dashboard after login?
+//Figure out
+
 app.get('/logout', function(req,res){
   req.session.reset();
   res.redirect('/');
