@@ -1,7 +1,7 @@
 var casper = require('casper').create({
   verbose: true,
-  logLevel: 'error',
-  clientScripts:[];
+  logLevel: 'error'
+  //clientScripts:[]
 });
 
 //global links variable, to be pushed into an array
@@ -16,15 +16,32 @@ function getLinks() {
 };
 
 casper.start('http://bing.com/', function(){
-  this.fill('form[action="/search]',{
+  this.fill('form[action="/search"]',{
     q: 'casperjs'
   }, true);
 });
 
 //aggregate results of our search by passing in function 'getLinks'
 casper.then(function(){
-  //setting global variables, evaluate getLinks 
+  //setting global variables, evaluate getLinks - which will push into array
   links = this.evaluate(getLinks);
-})
 
-casper.run();
+  //searching for 'phantomjs' by filling in form again
+  this.fill('form[action="/search"]',{
+    q: 'phantomjs'
+  }, true);
+
+
+});
+
+casper.then(function(){
+  links = links.concat(this.evaluate(getLinks));
+});
+
+casper.run(function(){
+  //echo results in readible format
+  //(below)print out number of links
+  this.echo(links.length + 'links found: ');
+  //print out links in new line
+  this.echo('-' + links.join('\n -')).exit();
+});
