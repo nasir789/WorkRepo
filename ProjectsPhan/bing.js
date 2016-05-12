@@ -1,16 +1,23 @@
 var casper = require('casper').create({
   verbose: true,
-  logLevel: 'error'
-  //clientScripts:[]
+  logLevel: 'error',
+  clientScripts:["binglib/jquery.min.js", "binglib/lodash.min.js"]
 });
 
 //global links variable, to be pushed into an array
 var links = [];
 
 //targeting 'b_algo' class, hence '.' and within class target 'a' element
+// function getLinks() {
+//   var links = document.querySelectorAll('.b_algo a');
+//   return Array.prototype.map.call(links, function(e){
+//     return e.getAttribute('href');
+//   });
+// };
+
 function getLinks() {
-  var links = document.querySelectorAll('.b_algo a');
-  return Array.prototype.map.call(links, function(e){
+  var links = $('.b_algo a');
+  return _.map(links, function(e){
     return e.getAttribute('href');
   });
 };
