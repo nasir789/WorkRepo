@@ -1,4 +1,13 @@
-var casper = require('casper').create();
+var casper = require('casper').create({
+  verbose: true,
+  logLevel: 'debug', //debug, info, warning, error
+  pageSettings: {
+    loadImages: false,
+    loadPlugins: false,
+    userAgent: ''
+  },
+  clientScripts:["binglib/jquery.min.js"]
+});
 
 casper.start('https://www.wikipedia.org/', function(){
   this.echo(this.getTitle());
