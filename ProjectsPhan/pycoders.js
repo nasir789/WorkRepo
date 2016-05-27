@@ -27,7 +27,9 @@ function getTitle(){
   var title = $('.campaign a');
   return _.map(title, function(e){
     return e.innerHTML;
+
   });
+  console.log('operating')
 };
 
 function getDate(){
