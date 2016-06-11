@@ -5,6 +5,12 @@
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 <body>
+  <div class = "container">
+   <div class="row">
+    <div class="col-sm-5 target">
+    </div>
+   </div>
+  </div>
 </body>
 
 
@@ -21,15 +27,34 @@ var Badge = React.createClass({
   }
 });
 
+//thumbnail component
+var Thumbnail = React.createClass({
+  render: function(){
+    return <div className="thumbnail">
+      <img src={this.props.imageUrl} />
+      <div className="caption">
+        <h3>{this.props.header}</h3>
+        <p>{this.props.description}</p>
+        <p>
+          <Badge title={this.props.title} number={this.props.number}/>
+        </p>
+      </div>
+    </div>
+  }
+})
+
 var options = {
-  title: 'Inbox',
-  number: 33
+  title: 'See Tutorials',
+  number: 32,
+  header: 'Learn React',
+  description: 'React is a pretty cool library to help create fast and dynamic pages',
+  imageUrl: 'https://s3.amazonaws.com/media-p.slid.es/uploads/alexanderfarennikov/images/1198519/reactjs.png'
 }; //where you define the information in the object
 
 
 //react to render
-var element = React.createElement(Badge, options);
+var element = React.createElement(Thumbnail, options);
 
 //where it will place in DOM
- ReactDOM.render(element, document.body);
+ ReactDOM.render(element, document.querySelector('.target'));
 </script>
