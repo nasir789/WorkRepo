@@ -1,6 +1,8 @@
+var React = require('react');
+
 //define react component class
 //defines form and component of element
-var Badge = React.createClass({
+module.exports = React.createClass({
   render: function() {
     // this.props // {} - for dynamic
 
