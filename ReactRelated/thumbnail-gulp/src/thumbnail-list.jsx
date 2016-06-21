@@ -1,3 +1,4 @@
+
 var ThumbnailList = React.createClass({
   render: function(){
     //use map to turn objects into components
