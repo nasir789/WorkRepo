@@ -1,3 +1,6 @@
+var React = require('react');
+var ThumbnailList = require('./thumbnail-list');
+
 var options = {
   //key to array of objects will be thumbnailData
   thumbnailData: [{
@@ -21,4 +24,4 @@ var options = {
 var element = React.createElement(ThumbnailList, options);
 
 //where it will place in DOM
- ReactDOM.render(element, document.querySelector('.target'));
+ React.render(element, document.querySelector('.target'));

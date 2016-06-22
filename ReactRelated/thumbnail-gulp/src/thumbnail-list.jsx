@@ -1,5 +1,7 @@
+var React = require('react');
+var Thumbnail = require('./thumbnail');
 
-var ThumbnailList = React.createClass({
+module.exports = React.createClass({
   render: function(){
     //use map to turn objects into components
 
