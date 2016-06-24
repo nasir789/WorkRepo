@@ -1,9 +1,12 @@
-/*html{
-    background-color: #f3f3f3;
-}*/
+html{
+      background-image: url(http://i65.tinypic.com/2rztjdw.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: fixed;
+      height: 100%;
+}
 
 body {
-  background-image: url(http://i65.tinypic.com/2rztjdw.png);
   -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -14,12 +17,39 @@ body {
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
-
     font: bold 14px sans-serif;
     text-align: center;
 }
 
 #user-name{
+  font-size: 20px;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#action-title{
+  font-size: 20px;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#user-name{
+  font-size: 20px;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#user-email{
+  font-size: 20px;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#user-password{
   font-size: 20px;
   color: #FFFFFF;
   font-weight: bold;
@@ -40,7 +70,6 @@ body {
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
     padding: 60px 80px;
     margin-bottom: 35px;
-    opacity: 0.5;
 }
 
 .form-register-with-email .form-row{
