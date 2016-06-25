@@ -1,12 +1,48 @@
 
 
 html{
-      /*background-image: url(http://i65.tinypic.com/2rztjdw.png);*/
+      background-image: url();
       background-repeat: no-repeat;
       background-size: 100% 100%;
       background-position: fixed;
       height: 100%;
-      background-color: pink;
+      background-color: #FFD348;
+}
+
+.logo-container {
+  /*width: 570px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  padding: 60px 80px;
+  margin-bottom: 35px;*/
+  position: fixed;
+  /* center the element */
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  /* give it dimensions */
+  min-height: 10em;
+  width: 90%;
+}
+
+
+#logo {
+  /*width: 570px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  padding: 60px 80px;
+  margin-bottom: 35px;*/
+  position: fixed;
+  /* center the element */
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  /* give it dimensions */
+  min-height: 10em;
+  width: 90%;
+  
 }
 
 body {
@@ -322,3 +358,5 @@ body {
   }
 
 /*-----Maitre*----*/
+
+/*SLIDER*/
