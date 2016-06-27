@@ -1,10 +1,10 @@
 
 
 window.Maitre = {
-uuid: "MFXXXXX",
+uuid: "/",
 host: "http://mywebsite.com",
 source: "product_hunt",
-test_mode: true,
+test_mode: false,
 require_name: true,
 require_leaderboard: false,
 labels: {

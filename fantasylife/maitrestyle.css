@@ -24,6 +24,7 @@ html{
   /* give it dimensions */
   min-height: 10em;
   width: 90%;
+  z-index: 1;
 }
 
 
@@ -42,7 +43,7 @@ html{
   /* give it dimensions */
   min-height: 10em;
   width: 90%;
-  
+
 }
 
 body {
@@ -346,7 +347,7 @@ body {
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
     padding: 60px 80px;
     margin-bottom: 35px;
-    position: fixed;
+    position: relative;
     /* center the element */
     right: 0;
     left: 0;
@@ -355,6 +356,8 @@ body {
     /* give it dimensions */
     min-height: 10em;
     width: 90%;
+    z-index: 1;
+
   }
 
 /*-----Maitre*----*/
