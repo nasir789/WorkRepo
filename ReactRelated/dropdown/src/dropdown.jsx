@@ -8,12 +8,12 @@ var ListItem = require('./list-item');
 
 module.exports = React.createClass({
   handleClick: function(){
-    alert('Helloooo');
+    //setState change will not only change value BUT force component to re-render
+     this.setState({open: !this.state.open});
   },
   //will initialize state
   getInitialState: function(){
-    return { open: false}   //dropdown should NOT be open when first render
-    //line 29 - terinary expression, if truthy show, if falsy ''
+    return { open: false }
   },
   render: function(){
     var list = this.props.items.map(function(item){
