@@ -10,6 +10,11 @@ module.exports = React.createClass({
   handleClick: function(){
     alert('Helloooo');
   },
+  //will initialize state
+  getInitialState: function(){
+    return { open: false}   //dropdown should NOT be open when first render
+    //line 29 - terinary expression, if truthy show, if falsy ''
+  },
   render: function(){
     var list = this.props.items.map(function(item){
       return <ListItem item={item} />
@@ -20,8 +25,8 @@ module.exports = React.createClass({
        className="btn-default"
        title={this.props.title}
        subTitleClassName="caret"
-       />
-       <ul>
+        />
+       <ul className={"dropdown-menu " + (this.state.open ? "show" : "") }>
         {list}
        </ul>
     </div>
