@@ -1,0 +1,62 @@
+
+
+body {
+  background-image: url("https://s31.postimg.org/43lo3abyz/FLcenterlogo.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%
+}
+
+
+
+.mainContent {
+  display:none;
+   z-index:10000;
+   /*background-color:#000;*/
+   width:675px;
+   min-height:200px;
+   /*border:1px solid #666;*/
+   position: fixed;
+   width: 50%;
+   height: 50%;
+   margin: 0px auto;
+   top: 20%;
+   left: 25%;
+   text-align: center;
+   height: 50px;
+
+
+   -moz-box-shadow:0 0 90px 5px #000;
+   -webkit-box-shadow: 0 0 90px #000;
+/*
+   top: 15;*/
+  /*background-color: #000;
+  border: 2px solid black;*/
+}
+
+.blackOverLay {
+    display:none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.86);
+}
+
+.randomImage {
+  position: fixed;
+    /* center the element */
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    /* give it dimensions */
+    height: auto;
+    width: auto;
+    top: 20%;
+}
+
+.btnGroup {
+  margin: 0 auto;
+  width: 20px;
+}
