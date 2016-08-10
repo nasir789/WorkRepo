@@ -3,31 +3,137 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="winapp.js"></script>
+    <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="animate.css">
   </head>
   <body>
     <div class="blackOverLay">
-
       <div class="imageContainer">
+
+        <div class="firstLine animated rotateInDownLeft">
+          <p id="typing_text">THE ONLY APP WHERE YOU CAN:</p>
+        </div>
+
         <div class="imageHold">
-         <image class="randomImage" src="https://s31.postimg.org/g4lvcg9fv/one_image.png"></img>
+         <image class="randomImage" src="https://s31.postimg.org/g4lvcg9fv/one_image.png" />
+           <div class="btnGroup">
+            <div class="btnClose">
+             <button id="buttonOne" onclick="closeThis()"><svg class="lnr lnr-cross"><use xlink:href="#lnr-cross"></use></svg>EXIT</button>
+           </div>
+           <div class="btnMaitre">
+             <button id="buttonTwo" onclick="winThis()"> <svg class="lnr lnr-list"><use xlink:href="#lnr-list"></use></svg> WIN </button>
+           </div>
+           <div class="btnBlog">
+             <button id="buttonThree" onclick="location.href='https://blog.fantasylifeapp.com/'"><svg class="lnr lnr-home"><use xlink:href="#lnr-home"></use></svg>BLOG</button>
+           </div>
+          </div>
+         </div>
+
+
+
+
+        <div class="item animated flipInY">
+          <img class="logoImage" src="https://s31.postimg.org/ssn7srvl7/Screen_Shot_2016_07_23_at_6_58_01_PM.png" />
         </div>
+
+       <div class="serviceContainer">
+        <div class="chatBox animated tada" >
+          <div id="descChat"><svg class="lnr lnr-bubble"><use xlink:href="#lnr-bubble"></use></svg> CHAT</div>
+        </div>
+        <div class="adviceBox animated slideInUp">
+          <div id="descAdv"><svg class="lnr lnr-thumbs-up"><use xlink:href="#lnr-thumbs-up"></use></svg> GET ADVICE</div>
+        </div>
+        <div class="talkBox animated wobble">
+          <div id="descTalk"><svg class="lnr lnr-bullhorn"><use xlink:href="#lnr-bullhorn"></use></svg> TRASH TALK </div>
+        </div>
+        <div class="moreBox animated fadeInRightBig">
+          <div id="descMore"><svg class="lnr lnr-plus-circle"><use xlink:href="#lnr-plus-circle"></use></svg> MORE </div>
+        </div>
+       </div>
+
+        <div class="fillerSpace">
+          <div class="contestDesc animated shake">
+            Every week we do a 'Contest of the Week' for all of our subscribers<br>
+
+          </div>
+          <div class="contestActionCall">
+            Click <b>'WIN'</b> to see the contest of the week!
+          </div>
+
+          <div class="pictureTwo">
+            <image class="fLTitleLogo" src="https://s10.postimg.org/jsv1r1tzt/Fantasy_Life_2.png">
+          </div>
         </div>
 
-      <div class="btnGroup">
-        <button id="buttonOne" onclick="closeThis()">CLOSE</button>
-        <button id="buttonTwo" onclick="closeThis()">WIN</button>
-        <button id="buttonThree" onclick="closeThis()">BLOG</button>
-      </div>
+       <div class="storeLinks">
+        <a href="https://itunes.apple.com/us/app/fantasy-life-matthew-berrys/id951876994?mt=8"><img class="storeApple" src="https://s31.postimg.org/h83qg2rt7/appbadger.png" /></a>
+        <a href="https://play.google.com/store/apps/details?id=com.arkeapps.fantasylife&hl=en"><img class="playGoogle" src="https://s32.postimg.org/kryzrcjp1/google_play_badge_1.png" /></a>
+       </div>
+
+       <div class="contactDiv">
+         <button class="contactUs" onclick="contactHit()">Contact Us</button>
+
+         <a id="ppName" href="./PrivacyPolicy.html">Privacy Policy</a>
+         <a id="tosName" href="./FantasyLifeTermOfUse.html">Terms Of Use</a>
 
 
+       </div>
 
+    </div>
+
+    <div class="holderMaitre">
+      <script type="text/javascript">
+        window.Maitre = { uuid: "xxxxxxxx" };
+        </script>
+      <script data-maitre src='https://maitreapp.co/widget.js' async></script>
+
+
+       <a id="backFromWin" href="#" onclick="goBackFromWin()">Main Menu</a>
 
 
     </div>
+
+
+<!--  -->
+
+  <!-- <div class="workDamnIt">
+   <button class="boopDoop" onclass="meowMix()">Dot Dot Dot</button>
+  </div> -->
+
+  </div>
+
+
+  <div class="contactInfo">
+    <div class="contactContent">
+      <div class="contactDescription">
+        <div class="contactQuestions">
+         Got Questions?
+        </div>
+        <div class="contactFeedback">
+         Thoughts on how we could improve Fantasy Life?
+        </div>
+        <div class="contactGeneral">
+         Or you just want to say Hello,
+        </div>
+        <div class="contactMisc">
+          Contact Us At
+        </div>
+        <div class="contactDetails">
+          support@fantasylifeapp.com
+        </div>
+
+        <button id="backButton" onclick="goBackNow()">Back</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="blackOverLayTwo">
+
+  </div>
 
   </body>
 </html>

@@ -3,35 +3,11 @@
 body {
   background-image: url("https://s31.postimg.org/43lo3abyz/FLcenterlogo.jpg");
   background-repeat: no-repeat;
-  background-size: 100%
+  background-image: 100%;
+  background-size: cover;
+
 }
 
-
-
-.mainContent {
-  display:none;
-   z-index:10000;
-   /*background-color:#000;*/
-   width:675px;
-   min-height:200px;
-   /*border:1px solid #666;*/
-   position: fixed;
-   width: 50%;
-   height: 50%;
-   margin: 0px auto;
-   top: 20%;
-   left: 25%;
-   text-align: center;
-   height: 50px;
-
-
-   -moz-box-shadow:0 0 90px 5px #000;
-   -webkit-box-shadow: 0 0 90px #000;
-/*
-   top: 15;*/
-  /*background-color: #000;
-  border: 2px solid black;*/
-}
 
 .blackOverLay {
     display:none;
@@ -40,23 +16,474 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.86);
+    /*if black overlay needed*/
+    /*background-color: rgba(0, 0, 0, 0.9);*/
+    /*white overlay*/
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 100;
+
 }
 
+/*TEST*/
+
+.blackOverLayTwo {
+    display:none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0.9;
+    /*z-index: 90;*/
+
+
+}
+
+
 .randomImage {
-  position: fixed;
-    /* center the element */
+  position: absolute;
     right: 0;
     left: 0;
     margin-right: auto;
     margin-left: auto;
-    /* give it dimensions */
+
     height: auto;
     width: auto;
-    top: 20%;
+    top: 22%;
 }
 
 .btnGroup {
   margin: 0 auto;
   width: 20px;
+  color: red;
+}
+
+.btnGroup {
+  width: 300px;
+   height: 150px;
+   border: 0px solid #c3c3c3;
+   display: -webkit-flex; /* Safari */
+   -webkit-justify-content: space-around; /* Safari 6.1+ */
+   display: flex;
+   justify-content: space-around;
+}
+
+.btnGroup div {
+  width: 50px;
+  height: 50px;
+}
+
+.btnGroup {
+    background-color: white; /* Green */
+    border: none;
+    color: white;
+    font-size: 16px;
+    margin: 5px -16px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#buttonOne {
+    background-color: black;
+    color: #44A1D3;
+    border: 2px solid #008CBA;
+    border-radius: 10px;
+}
+
+#buttonOne:hover {
+    background-color: #44A1D3;
+    color: white;
+}
+
+#buttonTwo {
+  background-color: black;
+  color: #44A1D3;
+  border: 2px solid #008CBA;
+  border-radius: 10px;
+}
+
+#buttonTwo:hover {
+  background-color: #44A1D3;
+  color: white;
+}
+
+#buttonThree {
+  background-color: black;
+  color: #44A1D3;
+  border: 2px solid #008CBA;
+  border-radius: 10px;
+}
+
+#buttonThree:hover {
+  background-color: #44A1D3;
+  color: white;
+}
+
+
+
+.imageContainer {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+#buttonOne {
+  position: absolute;
+  margin: 0 auto;
+  bottom: -212%;
+  border-left: -30px;
+  height: 20%;
+  width: 40%;
+  font-size: 15px;
+}
+
+#buttonTwo {
+  position: absolute;
+  margin: 0 auto;
+  border-left: -30px;
+  bottom: -212%;
+  height: 20%;
+  width: 40%;
+  font-size: 15px;
+}
+
+#buttonThree {
+  position: absolute;
+  margin: 0 auto;
+  border-left: -30px;
+  bottom: -212%;
+  height: 20%;
+  width: 40%;
+  font-size: 15px;
+}
+
+.contactName {
+  position: relative;
+}
+
+.infoContent {
+  position: relative;
+  bottom: 0;
+  width:100%;
+  text-align: center;
+}
+
+/*ContactStyling*/
+.contactInfo {
+background-color: #44A1D3;
+width: 100%;
+height: 100%;
+margin: 0 auto;
+position: absolute;
+display: none;
+}
+
+.contactUs {
+  background-color: black;
+  color: white;
+  border: 2px solid #008CBA;
+  border-radius: 10px;
+
+}
+
+.contactUs:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+
+
+/*Maitre Integration*/
+
+#maitre-widget-container {
+    /* center the element */
+    position: absolute;
+    top: 25%;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    /* give it dimensions */
+    background-color: transparent;
+    z-index: 1;
+  }
+
+#backFromWin {
+  top: 60%;
+  bottom: 50%;
+  left: 48.5%;
+  right: 0;
+  position: absolute;
+  margin: 0 auto;
+  background-color: transparent;
+  color: black;
+}
+/*SVG css*/
+
+.lnr {
+  display: inline-block;
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.05em;
+}
+
+.lnr-list {
+  color: #0F52BA;
+  /* We can use "color" for setting the color
+  of the SVG because we set its "fill" to
+  "currentColor" */
+  font-size: 115%;
+  /* We can use "font-size" for changing the size
+  of the SVG because its width and height were
+  set 1em.
+  To get crisp results, use sizes that are
+  a multiple of 20; because Linearicons was
+  designed on a 20 by 20 grid. */
+}
+
+.lnr-bubble {
+  color: #0F52BA;
+  font-size: 50px;
+}
+
+.lnr-thumbs-up {
+  color: #0F52BA;
+  font-size: 60px;
+}
+
+.lnr-bullhorn {
+  color: #0F52BA;
+  font-size: 60px;
+}
+
+.lnr-plus-circle {
+  color: #0F52BA;
+  font-size: 40px;
+}
+
+
+.chatBox {
+  background-color: transparent;
+  margin: 0 auto;
+  position: absolute;
+  top: 75%;
+  left: -180%;
+  height: 8%;
+  width: 10%;
+  color: #44A1D3;
+  font-size: 28px;
+}
+
+#descChat{
+  display: inline-flex;
+}
+
+.adviceBox {
+  background-color: transparent;
+  margin: 0 auto;
+  position: absolute;
+  top: 70%;
+  left: -104%;
+  text-align: center;
+  height: 8%;
+  width: 10%;
+  color: #44A1D3;
+  font-size: 28px;
+}
+
+#descAdv{
+  display: inline-flex;
+}
+
+.talkBox {
+  background-color: transparent;
+  margin: 0 auto;
+  position: absolute;
+  top: 110%;
+  left: -180%;
+  height: 8%;
+  width: 10%;
+  color: #44A1D3;
+  font-size: 28px;
+  text-align: center;
+}
+
+#descTalk {
+  display: inline-flex;
+}
+
+.moreBox {
+  background-color: transparent;
+  margin: 0 auto;
+  position: absolute;
+  top: 115%;
+  left: -96%;
+  height: 8%;
+  width: 10%;
+  color: #44A1D3;
+  font-size: 28px;
+}
+
+#descMore {
+  display: inline-flex;
+}
+
+.fillerSpace{
+  position: absolute;
+  margin: 0 auto;
+  left: -180%;
+  bottom: -194%;
+  border-style: none;
+  border-color: blue;
+  background-color: transparent;
+  width: 150%;
+  height: 150%;
+}
+
+.playGoogle {
+  margin: 0 auto;
+  position: absolute;
+  width: 110%;
+  left: 183%;
+  top: 200%;
+}
+
+.storeApple {
+  margin: 0 auto;
+  position: absolute;
+  left: 198%;
+  bottom: -100%;
+  height: 25%;
+}
+
+.contactUs {
+  margin: 0 auto;
+  position: absolute;
+  left: 220%;
+  bottom: -160%;
+  text-align: center;
+  height: 20%;
+  width: 40%;
+  font-size: 15px;
+}
+
+/*Contact Us page*/
+
+#backButton {
+  background-color: white;
+  color: black;
+}
+
+.contactContent {
+  color: white;
+}
+
+/**/
+
+
+/*Animation css*/
+.firstLine {
+margin: 0 auto;
+left: -180%;
+position: absolute;
+bottom: 45%;
+-webkit-animation-delay: 4s;
+background-color: #44A1D3;
+color: white;
+}
+
+#typing_text {
+  font-size: 20px;
+
+}
+
+.item {
+ margin: 0 auto;
+ position: absolute;
+ right: -190%;
+ top: 40%;
+ -webkit-animation-duration: 2s;
+ -webkit-animation-delay: 3s;
+ -webkit-animation-iteration-count: 1;
+}
+
+.logoImage {
+  margin: 0 auto;
+  position: absolute;
+  right: -170%;
+}
+
+.chatBox {
+ -webkit-animation-delay: 5s;
+}
+
+.adviceBox {
+ -webkit-animation-delay: 2s;
+}
+
+.talkBox {
+ -webkit-animation-delay: 3s;
+}
+
+.contestActionCall {
+  font-size: 229%;
+  text-align: center;
+  position: absolute;
+  margin: 0 auto;
+  top: 38%;
+  color: #44a1d3;
+}
+
+.contestDesc {
+  font-size: 158%;
+  text-align: center;
+  position: absolute;
+  margin: 0 auto;
+  top: 5%;
+  color: #44a1d3;
+}
+
+.contestDesc {
+  -webkit-keyframes-delay: 8s;
+}
+
+/*ContactUs page*/
+.contactDescription {
+  position: absolute;
+  margin: 0 auto;
+  text-align: center;
+  right: 0;
+  left: 0;
+  font-size: 40px;
+  top: 25%;
+}
+
+/*ToS + PP*/
+#ppName {
+  position: absolute;
+  margin: 0 auto;
+  right: -160%;
+  bottom: -192%;
+}
+
+#tosName {
+  position: absolute;
+  margin: 0 auto;
+  right: -159%;
+  bottom: -205%;
+}
+
+/*Misc*/
+
+.pictureTwo {
+  position: absolute;
+  bottom: -15%;
+}
+
+.fLTitleLogo {
+  width: 100%;
 }
